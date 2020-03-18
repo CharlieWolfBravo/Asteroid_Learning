@@ -7,7 +7,7 @@ extends Area2D
 const turn_speed = 180
 
 const max_move_speed = 150
-const acceleration = 0.05
+const acceleration = 0.08
 const decceleration = 0.01
 
 var motion = Vector2(0,0)
@@ -42,5 +42,14 @@ func _process(delta):
 	position.x = wrapf(position.x, -screen_buffer, screen_size.x + screen_buffer)
 	position.y = wrapf(position.y, -screen_buffer, screen_size.y + screen_buffer)
 
-func _detect_asteroid_collision():
-	
+
+func _on_player_area_entered(area):
+	# We need to check which area to determine what to do
+	if area.name == 'Asteroid':
+		reset_player()
+		
+func reset_player():
+	self.position.x = screen_size.x/2
+	self.position.y = screen_size.y/2
+	self.rotation_degrees = 0.0
+	self.motion = Vector2(0,0)

@@ -19,6 +19,8 @@ var move_dir
 var motion = Vector2(0,0)
 
 var rotation_speed
+
+signal player_collision
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	randomize()
@@ -49,3 +51,5 @@ func _process(delta):
 	# Screen Wrapping
 	position.x = wrapf(position.x, -screen_buffer, screen_size.x + screen_buffer)
 	position.y = wrapf(position.y, -screen_buffer, screen_size.y + screen_buffer)
+	
+	# Dectect collision
