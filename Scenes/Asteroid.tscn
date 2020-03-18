@@ -15,3 +15,4 @@ texture = ExtResource( 1 )
 position = Vector2( -1.80493, -0.902496 )
 scale = Vector2( 0.165188, 0.174213 )
 polygon = PoolVector2Array( -115.306, -80.0249, -138.646, 7.02051, -94.301, 86.6892, 3.72384, 133.9, 38.7327, 78.5748, 108.751, 83.0008, 130.534, -4.78227, 48.8464, -29.1255, 70.6297, -111.745, -12.6137, -139.039 )
+[connection signal="area_entered" from="." to="." method="_on_Asteroid_area_entered"]

@@ -53,3 +53,13 @@ func _process(delta):
 	position.y = wrapf(position.y, -screen_buffer, screen_size.y + screen_buffer)
 	
 	# Dectect collision
+
+
+func _on_Asteroid_area_entered(area):
+	if area.name == 'Projectile':
+		area.get_parent().remove_child(area)
+		destroy_asteroid()
+
+func destroy_asteroid():
+		get_parent().remove_child(self)
+	

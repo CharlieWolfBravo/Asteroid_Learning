@@ -47,7 +47,8 @@ func _process(delta):
 
 func _on_player_area_entered(area):
 	# We need to check which area to determine what to do
-	if area.name == 'Asteroid':
+	print(area.name.substr(1,8))
+	if area.name.substr(1,8) == 'Asteroid':
 		reset_player()
 		
 func reset_player():
