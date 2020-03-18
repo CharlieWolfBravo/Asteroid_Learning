@@ -20,6 +20,8 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	
+	
 	if Input.is_action_pressed("ui_left"):
 		self.rotation_degrees -= turn_speed * delta
 	if Input.is_action_pressed("ui_right"):
@@ -39,3 +41,6 @@ func _process(delta):
 	# Screen Wrapping
 	position.x = wrapf(position.x, -screen_buffer, screen_size.x + screen_buffer)
 	position.y = wrapf(position.y, -screen_buffer, screen_size.y + screen_buffer)
+
+func _detect_asteroid_collision():
+	
