@@ -17,7 +17,7 @@ _global_script_class_icons={
 
 config/name="Asteroid Learning"
 run/main_scene="res://Scenes/Main.tscn"
-config/icon="res://icon.png"
+config/icon="res://Sprites/Spaceship v1 Icon.png"
 
 [display]
 
