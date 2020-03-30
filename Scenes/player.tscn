@@ -9,6 +9,8 @@ script = ExtResource( 2 )
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 vframes = 4
+frame = 1
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PoolVector2Array( -2.98875, -6.98779, 1.97045, -6.97286, 4.99759, -3.96936, 5.02721, -2.03383, 6.96897, -2.03383, 7.93984, -0.988269, 7.98963, 1.00327, 6.99386, 1.99905, 5.02721, 1.99905, 5.02721, 3.99059, 1.99011, 7.0028, -3.01364, 7.0028, -2.98874, 6.03192, -6.00095, 6.03192, -6.00095, 6.03192, -5.97606, -5.99202, -2.98875, -5.99202 )
 [connection signal="area_entered" from="." to="." method="_on_player_area_entered"]
